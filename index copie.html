@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nuances d'ombre</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f4f4f1;
+    --ink: #161616;
+    --soft: #5c5c58;
+    --frame: #ffffff;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #141414; --ink: #f1f1ee; --soft: #a8a8a3; --frame: #1f1f1f; }
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body {
+    min-height: 100vh;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Bricolage Grotesque", -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    padding: clamp(16px, 4vw, 48px);
+  }
+  main { width: 100%; max-width: 1100px; margin: 0 auto; text-align: center; }
+  h1 {
+    font-size: clamp(26px, 5vw, 46px);
+    line-height: 1.05;
+    font-weight: 700;
+    margin: 0 0 6px;
+    text-wrap: balance;
+  }
+  .legende {
+    font-size: clamp(16px, 2.4vw, 20px);
+    color: var(--soft);
+    margin: 0 0 clamp(16px, 3vw, 28px);
+  }
+  .cadre {
+    width: fit-content;
+    max-width: 100%;
+    margin: 0 auto;
+    background: var(--frame);
+    border-radius: 10px;
+    padding: clamp(4px, 1vw, 10px);
+    box-shadow: 0 2px 18px rgba(0, 0, 0, .12);
+  }
+  video {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 78vh;
+    max-height: 78dvh;
+    border-radius: 6px;
+    background: #000;
+  }
+  .aide {
+    text-align: center;
+    font-size: 13px;
+    color: var(--soft);
+    margin: 12px 0 0;
+  }
+</style>
+</head>
+<body>
+<main>
+  <h1>Nuances d'ombre</h1>
+  <p class="legende">Réflexions lumineuses – mouvements d&#39;ombres &amp; dégradés de nuances</p>
+  <div class="cadre">
+    <video src="reflexions_ombre.mp4#t=0.1" controls autoplay muted loop playsinline preload="metadata"></video>
+  </div>
+  <p class="aide">Touche la vidéo puis l'icône du haut-parleur pour activer le son.</p>
+</main>
+</body>
+</html>
